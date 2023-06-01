@@ -1,6 +1,6 @@
 using Hobbies.Models;
 
-namespace Hobbies.Data
+namespace Hobbies.Services
 {
     public interface IPersonsRepo : IRepository<Person>
     {

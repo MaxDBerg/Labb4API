@@ -1,7 +1,8 @@
 using Hobbies.Models;
+using Hobbies.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace Hobbies.Data
+namespace Hobbies.Services
 {
     public class SqlPersonsRepo : IPersonsRepo
     {

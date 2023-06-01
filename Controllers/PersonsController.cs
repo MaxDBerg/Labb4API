@@ -1,5 +1,6 @@
 using AutoMapper;
 using Hobbies.Data;
+using Hobbies.Services;
 using Hobbies.Dtos;
 using Hobbies.Models;
 using Microsoft.AspNetCore.Mvc;

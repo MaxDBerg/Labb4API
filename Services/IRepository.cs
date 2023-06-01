@@ -1,4 +1,4 @@
-namespace Hobbies.Data
+namespace Hobbies.Services
 {
     public interface IRepository<T>
     {

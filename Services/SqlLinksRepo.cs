@@ -1,6 +1,7 @@
 using Hobbies.Models;
+using Hobbies.Data;
 
-namespace Hobbies.Data
+namespace Hobbies.Services
 {
     public class SqlLinksRepo : IRepository<Link>
     {

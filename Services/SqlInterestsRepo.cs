@@ -1,6 +1,6 @@
 using Hobbies.Models;
-
-namespace Hobbies.Data
+using Hobbies.Data;
+namespace Hobbies.Services
 {
     public class SqlInterestsRepo : IRepository<Interest>
     {
