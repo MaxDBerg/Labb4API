@@ -3,6 +3,7 @@ using Hobbies.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hobbies.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230601105614_ConnectedInterestandPerson")]
+    partial class ConnectedInterestandPerson
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,57 +88,6 @@ namespace Hobbies.Migrations
                     b.HasIndex("PersonID");
 
                     b.ToTable("Links");
-
-                    b.HasData(
-                        new
-                        {
-                            LinkID = 1,
-                            InterestID = 1,
-                            LinkURL = "https://www.svenskfotboll.se/",
-                            PersonID = 1
-                        },
-                        new
-                        {
-                            LinkID = 2,
-                            InterestID = 1,
-                            LinkURL = "https://www.fotbollskanalen.se/",
-                            PersonID = 1
-                        },
-                        new
-                        {
-                            LinkID = 3,
-                            InterestID = 2,
-                            LinkURL = "https://www.golf.se/",
-                            PersonID = 2
-                        },
-                        new
-                        {
-                            LinkID = 4,
-                            InterestID = 2,
-                            LinkURL = "https://www.golf.se/",
-                            PersonID = 3
-                        },
-                        new
-                        {
-                            LinkID = 5,
-                            InterestID = 2,
-                            LinkURL = "https://www.golf.se/",
-                            PersonID = 4
-                        },
-                        new
-                        {
-                            LinkID = 6,
-                            InterestID = 3,
-                            LinkURL = "https://www.tennis.se/",
-                            PersonID = 2
-                        },
-                        new
-                        {
-                            LinkID = 7,
-                            InterestID = 3,
-                            LinkURL = "https://www.tennis.se/",
-                            PersonID = 3
-                        });
                 });
 
             modelBuilder.Entity("Hobbies.Models.Person", b =>

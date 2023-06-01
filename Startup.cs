@@ -24,7 +24,7 @@ namespace Hobbies
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddScoped<IRepository<Person>, SqlPersonsRepo>();
+            services.AddScoped<IPersonsRepo, SqlPersonsRepo>();
             services.AddScoped<IRepository<Interest>, SqlInterestsRepo>();
             services.AddScoped<IRepository<Link>, SqlLinksRepo>();
         }

@@ -29,6 +29,12 @@ namespace Hobbies.Data
             return interest;
         }
 
+        public IEnumerable<Link> GetAllLinksForPerson(int id)
+        {
+            var link = _context.Persons.Include(pe => pe.Links).Where(pe => pe.PersonID == id).SelectMany(pe => pe.Links).ToList();
+            return link;
+        }
+
         public Person Add(Person entity)
         {
             _context.Persons.Add(entity);
@@ -57,6 +63,21 @@ namespace Hobbies.Data
             return person;
         }
 
+        public Interest AddInterestToPerson(int PersonId, int InterestId)
+        {
+            var person = _context.Persons.FirstOrDefault(p => p.PersonID == PersonId);
+            var interest = _context.Interests.FirstOrDefault(i => i.InterestID == InterestId);
+            if (person.Interests == null) 
+            { 
+                person.Interests = new List<Interest>();
+            }
+            if (person != null && interest != null)
+            {
+                person.Interests.Add(interest);
+                SaveChanges();
+            }
+            return interest;
+        }
         public bool SaveChanges()
         {
             return _context.SaveChanges() > 0;
