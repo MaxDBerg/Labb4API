@@ -8,9 +8,9 @@ namespace Hobbies.Models
         public int LinkID { get; set; }
         [Required]
         public string LinkURL { get; set; }
-        [Required]
+        public int PersonID { get; set; }
         public Person Person { get; set; }
-        [Required]
+        public int InterestID { get; set; }
         public Interest Interest { get; set; }
     }
 }

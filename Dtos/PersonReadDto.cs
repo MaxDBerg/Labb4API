@@ -4,8 +4,8 @@ namespace Hobbies.Dtos
 {
     public class PersonReadDto
     {
-        //[Key]
-        //public int PersonID { get; set; }
+        [Key]
+        public int PersonID { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]

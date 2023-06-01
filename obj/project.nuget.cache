@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iyHwbnS89Q/bQn0xo0xAteK7Pt7DMXEkwRgVkb0aGoPe6f775Lz0IUKEgsqInDpgrXkFK1SVRL19NmuInSQRpg==",
+  "dgSpecHash": "2q9xTJ7UaObRtVcX74SoyurKZfDZd8f4kbWaULYlGFi0kyn9xweQZutji/YYz7pysK3MU+mAUAILgEtftGhluQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\maxda\\OneDrive\\Dokument\\CampusVarberg\\Kurs 6 Avancerad.NET\\Labb4API\\hobbies\\Hobbies.csproj",
+  "projectFilePath": "C:\\Users\\maxda\\source\\repos\\Labb4API\\Hobbies.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maxda\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\maxda\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

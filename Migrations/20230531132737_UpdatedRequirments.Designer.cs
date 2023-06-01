@@ -3,6 +3,7 @@ using Hobbies.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hobbies.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230531132737_UpdatedRequirments")]
+    partial class UpdatedRequirments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,7 +38,7 @@ namespace Hobbies.Migrations
 
                     b.HasKey("InterestID");
 
-                    b.ToTable("Interests", (string)null);
+                    b.ToTable("Interests");
 
                     b.HasData(
                         new
@@ -84,7 +87,7 @@ namespace Hobbies.Migrations
 
                     b.HasIndex("PersonID");
 
-                    b.ToTable("Links", (string)null);
+                    b.ToTable("Links");
                 });
 
             modelBuilder.Entity("Hobbies.Models.Person", b =>
@@ -109,7 +112,7 @@ namespace Hobbies.Migrations
 
                     b.HasKey("PersonID");
 
-                    b.ToTable("Persons", (string)null);
+                    b.ToTable("Persons");
 
                     b.HasData(
                         new
@@ -154,7 +157,7 @@ namespace Hobbies.Migrations
 
                     b.HasIndex("PersonsPersonID");
 
-                    b.ToTable("InterestPerson", (string)null);
+                    b.ToTable("InterestPerson");
                 });
 
             modelBuilder.Entity("Hobbies.Models.Link", b =>

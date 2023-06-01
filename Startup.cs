@@ -20,6 +20,8 @@ namespace Hobbies
 
             services.AddControllers();
 
+            services.AddSwaggerGen();
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddScoped<IRepository<Person>, SqlPersonsRepo>();
@@ -32,6 +34,8 @@ namespace Hobbies
             if(env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();

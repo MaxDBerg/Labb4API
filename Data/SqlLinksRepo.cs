@@ -50,7 +50,7 @@ namespace Hobbies.Data
 
         public bool SaveChanges()
         {
-            return SaveChanges();
+            return _context.SaveChanges() > 0;
         }
     }
 }

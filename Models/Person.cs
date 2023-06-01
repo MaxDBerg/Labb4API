@@ -15,5 +15,7 @@ namespace Hobbies.Models
 
         [Required]
         public ICollection<Interest> Interests { get; set; }
+        [Required]
+        public ICollection<Link> Links { get; set; }
     }
 }

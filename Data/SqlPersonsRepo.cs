@@ -1,8 +1,9 @@
 using Hobbies.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hobbies.Data
 {
-    public class SqlPersonsRepo : IRepository<Person>
+    public class SqlPersonsRepo : IPersonsRepo
     {
         public SqlPersonsRepo(AppDbContext context)
         {
@@ -20,6 +21,12 @@ namespace Hobbies.Data
         {
             var person = _context.Persons.ToList();
             return person;
+        }
+
+        public IEnumerable<Interest> GetAllInterestsForPerson(int id)
+        {
+            var interest = _context.Persons.Include(pe => pe.Interests).Where(pe => pe.PersonID == id).SelectMany(pe => pe.Interests).ToList();
+            return interest;
         }
 
         public Person Add(Person entity)
@@ -52,7 +59,7 @@ namespace Hobbies.Data
 
         public bool SaveChanges()
         {
-            return SaveChanges();
+            return _context.SaveChanges() > 0;
         }
     }
 }
